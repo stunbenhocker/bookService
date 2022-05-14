@@ -8,10 +8,13 @@
     select * from book
     </select>
     
-     <select id="bookListAjax" resultType="kr.book.entity.Book">
+<!--<select id="bookListAjax" resultType="kr.book.entity.Book">
     select * from book order by num desc
-    </select> 
+    </select>  -->
     
-    
+    <insert id="bookInsert" parameterType="kr.book.entity.Book">
+        insert into book(num, title, author, company, isbn, count)
+		values(book_num.nextval, #{title}, #{author}, #{company}, #{isbn}, #{count})
+    </insert>
 
 </mapper>

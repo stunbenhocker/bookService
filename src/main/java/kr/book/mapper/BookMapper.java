@@ -9,7 +9,8 @@ public interface BookMapper {
 	public List<Book> bookList();
 
 	public List<Book> bookListAjax();
-
+	
+	public void bookInsert(Book book);
 
 
 }

@@ -12,7 +12,13 @@ create table book(
 
 create sequence book_num;
 
+select * from user_sequences;
+
+drop sequence book_num;
+
 select * from book;
+
+delete from book;
 
 insert into book(num, title, author, company, isbn, count)
 values(book_num.nextval, '1984','조지오웰','소담', '1111111', 3);
